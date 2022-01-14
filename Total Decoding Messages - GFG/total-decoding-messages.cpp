@@ -22,9 +22,9 @@ class Solution {
 		      int count=0;
 		      
 		      if(d>0)
-		        count+=count2%m; 
+		        count+=count2; 
 		      if(dd>=10 && dd<=26)
-		        count+=count1%m;
+		        count+=count1;
 		      
 		      count1=count2%m; // prev to prev
 		      count2=count%m; // count2 prev sol
