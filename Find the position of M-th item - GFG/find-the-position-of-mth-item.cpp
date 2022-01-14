@@ -13,13 +13,18 @@ class Solution {
         // code here
         if(N==1)
             return 1;
-        M=M%N;
+            
+        if((M+K-1)%N==0) // cycle complete
+            return N;
+        else
+            return (M+K-1)%N;
+        // M=M%N;
         
-        int ans=M+K-1;
-        if(ans>N)
-            return ans-N;
-        else 
-            return ans;
+        // int ans=M+K-1;
+        // if(ans>N)
+        //     return ans-N;
+        // else 
+        //     return ans;
     }
 };
 
