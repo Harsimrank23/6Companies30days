@@ -9,50 +9,26 @@ using namespace std;
 
 class Solution {
   public:
-    int maxProfit(int K, int N, int A[]) {
+    int maxProfit(int k, int n, int a[]) {
         // code here
-        // int dp[k+1][n+1];
-        // int max_profit=INT_MIN;
+        int dp[k+1][n+1];
         
-        // for (int i = 0; i <= k; i++)
-        //     dp[i][0] = 0;
+        for (int i = 0; i <= k; i++)
+            dp[i][0] = 0;
             
-        // for (int j = 0; j <= n; j++)
-        //     dp[0][j] = 0;
+        for (int j = 0; j <= n; j++)
+            dp[0][j] = 0;
             
-        // for(int i=1;i<=k;i++)
-        // {
-        //     for(int j=1;j<n;j++)
-        //     {
-        //         max_profit=max(max_profit,dp[i-1][j-1]-a[j-1]);
-        //         dp[i][j]=max(dp[i][j-1],max_profit+a[j]);
-        //     }
-        // }
-        // return dp[k][n-1];
-        
-               
-        int profit[K + 1][N + 1];
-
-        for (int i = 0; i <= K; i++)
-        profit[i][0] = 0;
-        
-        
-        for (int j = 0; j <= N; j++)
-        profit[0][j] = 0;
-        
-        
-        for (int i = 1; i <= K; i++) {
-        int prevDiff = INT_MIN;
-        for (int j = 1; j < N; j++) {
-        prevDiff = max(prevDiff,
-        profit[i - 1][j - 1] - A[j - 1]);
-        profit[i][j] = max(profit[i][j - 1],
-        A[j] + prevDiff);
+        for(int i=1;i<=k;i++)
+        {
+            int max_profit=INT_MIN;
+            for(int j=1;j<n;j++)
+            {
+                max_profit=max(max_profit,dp[i-1][j-1]-a[j-1]);
+                dp[i][j]=max(dp[i][j-1],max_profit+a[j]);
+            }
         }
-        }
-        
-        return profit[K][N - 1];
-                
+        return dp[k][n-1];
     }
 };
 
