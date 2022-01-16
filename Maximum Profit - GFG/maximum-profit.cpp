@@ -11,12 +11,12 @@ class Solution {
   public:
     int maxProfit(int k, int n, int a[]) {
         // code here
-        int dp[k+1][n+1];
+        int dp[k+1][n];
         
         for (int i = 0; i <= k; i++)
             dp[i][0] = 0;
             
-        for (int j = 0; j <= n; j++)
+        for (int j = 0; j < n; j++)
             dp[0][j] = 0;
             
         for(int i=1;i<=k;i++)
