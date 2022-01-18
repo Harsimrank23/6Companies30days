@@ -13,8 +13,8 @@ class Solution
     long long countWays(int m)
     {
         // your code here
-       long long int num=m/2;
-       return num+1;
+        long long int num=m/2;
+        return num+1;
     }
 };
 
