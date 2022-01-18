@@ -13,6 +13,7 @@ public:
         // code here
         unordered_map<int,unordered_set<int>>row,col,grid;
         
+        
         for(int i=0;i<mat.size();i++)
         {
             for(int j=0;j<mat[i].size();j++)
@@ -29,15 +30,16 @@ public:
                         
                     int box=((i/3)+(j/3)*3);
                     if(grid[box].count(val))
-                        return false;
+                        return 0;
                     
                     row[i].insert(val);
                     col[j].insert(val);
                     grid[box].insert(val);
+                
                 }
             }
         }
-        return true;
+        return 1;
     }
 };
 
