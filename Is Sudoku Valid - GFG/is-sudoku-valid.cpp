@@ -27,7 +27,7 @@ public:
                     if(col[j].count(val))
                         return 0;
                         
-                    int box=(i/3)*3+j/3;
+                    int box=((i/3)+(j/3)*3);
                     if(grid[box].count(val))
                         return false;
                     
