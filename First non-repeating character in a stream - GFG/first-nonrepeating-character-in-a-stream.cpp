@@ -16,7 +16,7 @@ class Solution {
 		    {
 		        q.push(A[i]);
 		        
-		        freq[A[i]-97]++; // ascii value of 'a' is 97 so to convert it into int form we had to - 97
+		        freq[A[i]-97]++; // ascii value of 'a' is 97 so to convert it into int form we had to - 97 , so increment freq of each char
 		        
 		        while(q.size()>0 && freq[q.front()-97]!=1)
 		            q.pop();
