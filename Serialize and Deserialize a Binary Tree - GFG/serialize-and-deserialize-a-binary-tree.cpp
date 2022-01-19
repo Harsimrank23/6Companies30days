@@ -116,18 +116,18 @@ class Solution
     Node * deSerialize(vector<int> &A)
     {
        //Your code here
-        if(A.size()==0)
-            return NULL;
-        if(A[i]==-1)
-        {
-            i++;
-            return NULL;
-        }
-        Node* root=new Node(A[i]);
-        i++;
-        root->left=deSerialize(A);
-        root->right=deSerialize(A);
-        return root;
+        // if(A.size()==0)
+        //     return NULL;
+        // if(A[i]==-1)
+        // {
+        //     i++;
+        //     return NULL;
+        // }
+        // Node* root=new Node(A[i]);
+        // i++;
+        // root->left=deSerialize(A);
+        // root->right=deSerialize(A);
+        return NULL;
     }
 
 };
