@@ -97,8 +97,6 @@ class Solution
     vector<int>ans;
     vector<int> serialize(Node *root) 
     {
-        
-     
        if(root==NULL)
        {
             ans.push_back(-1);
