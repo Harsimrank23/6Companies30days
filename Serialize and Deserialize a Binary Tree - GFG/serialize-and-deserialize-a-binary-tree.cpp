@@ -94,9 +94,10 @@ class Solution
 {
     public:
     //Function to serialize a tree and return a list containing nodes of tree.
+    vector<int>ans;
     vector<int> serialize(Node *root) 
     {
-        vector<int>ans;
+        
      
        if(root==NULL)
        {
@@ -106,9 +107,10 @@ class Solution
             
         serialize(root->left);
         cout<<root->data<<" ";
+        ans.push_back(root->data);
         serialize(root->right);
         
-        // return ans;
+        return ans;
     }
     
     //Function to deserialize a list and construct the tree.
@@ -116,18 +118,18 @@ class Solution
     Node * deSerialize(vector<int> &A)
     {
        //Your code here
-        // if(A.size()==0)
-        //     return NULL;
-        // if(A[i]==-1)
-        // {
-        //     i++;
-        //     return NULL;
-        // }
-        // Node* root=new Node(A[i]);
-        // i++;
-        // root->left=deSerialize(A);
-        // root->right=deSerialize(A);
-        return NULL;
+        if(A.size()==0)
+            return NULL;
+        if(A[i]==-1)
+        {
+            i++;
+            return NULL;
+        }
+        Node* root=new Node(A[i]);
+        i++;
+        root->left=deSerialize(A);
+        root->right=deSerialize(A);
+        return root;
     }
 
 };
