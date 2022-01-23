@@ -141,7 +141,7 @@ int countSubtreesWithSumX(Node* root, int X)
 {
 	// Code here
 	ctr = 0;
-	int x = solve(root,X);
+	solve(root,X);
 	return ctr;
 	
 }
