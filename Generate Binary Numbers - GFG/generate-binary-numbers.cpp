@@ -12,6 +12,7 @@ vector<string> generate(int N)
 	// Your code here
 	queue<string>nums;
 	vector<string>ans;
+	
 	nums.push("1");
 	
 	for(int i=1;i<=N;i++){
