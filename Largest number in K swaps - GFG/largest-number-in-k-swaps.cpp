@@ -29,18 +29,14 @@ class Solution
             if(str[i]==maxchar)
             {
                 swap(str[i],str[index]);
-                // char temp=str[index];
-                // str[index]=str[i];
-                // str[i]=temp;
+               
                 
                 if(ans<str)
                     ans=str;
                 
                 solve(str,n,k,ans,index+1);
-                // char temp1=str[index];
-                // str[index]=str[i];
-                // str[i]=temp;
-                 swap(str[i],str[index]);
+                
+                swap(str[i],str[index]);
             }
         }
     }
