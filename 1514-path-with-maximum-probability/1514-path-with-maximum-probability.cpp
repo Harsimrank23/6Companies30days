@@ -8,10 +8,10 @@ public:
         }        
         vector<double>prob(n,0.0);
         prob[start]=1.0;
-        priority_queue<pair<double,int>>pq;
+        queue<pair<double,int>>pq;
         pq.push({1.0,start});
         while(!pq.empty()){
-            int ne=pq.top().second;
+            int ne=pq.front().second;
             pq.pop();
             for(auto&e:g[ne]){
                 if(prob[ne]*e.second>prob[e.first]){
