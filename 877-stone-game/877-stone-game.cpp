@@ -7,7 +7,7 @@ public:
         int n=piles.size();
 
         deque<int>pq;
-        // pq.push_front(piles[0]);
+        
         for(int i=0;i<n;i++)
         {
             pq.push_back(piles[i]);
